@@ -11,10 +11,11 @@ extension Home {
                 VStack {
                     HStack {
                         Text(verbatim: project.title)
+                            .foregroundColor(.primary)
                         Spacer()
                     }
                     ZStack {
-                        Trail()
+                        Trail(points: project.points.count)
                         VStack {
                             ForEach(0 ..< project.points.count) { point in
                                 HStack {
@@ -22,14 +23,13 @@ extension Home {
                                         .lineLimit(1)
                                         .font(.footnote)
                                         .foregroundColor(.secondary)
-//                                        .padding(point > 0 ? .top : .init())
                                     Spacer()
                                 }
                             }
                         }.padding(.leading, 12)
                     }
                 }.padding()
-            }.padding(.horizontal)
+            }
         }
     }
 }
