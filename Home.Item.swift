@@ -2,7 +2,7 @@ import SwiftUI
 
 extension Home {
     struct Item: View {
-        let project: Project
+        let project: Model
         
         var body: some View {
             ZStack {
@@ -11,6 +11,7 @@ extension Home {
                 VStack {
                     HStack {
                         Text(verbatim: project.title)
+                            .font(.footnote)
                             .foregroundColor(.primary)
                         Spacer()
                     }
@@ -26,9 +27,11 @@ extension Home {
                                     Spacer()
                                 }
                             }
-                        }.padding(.leading, 12)
+                        }
+                        .padding(.leading, 12)
                     }
-                }.padding()
+                }
+                .padding()
             }
         }
     }

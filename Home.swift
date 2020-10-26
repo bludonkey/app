@@ -1,7 +1,9 @@
 import SwiftUI
 
 struct Home: View {
-    private let projects = [Project(title: "To the office",
+    @State private var project: Model?
+    
+    private let projects = [Model(title: "To the office",
                                     distance: 12.5,
                                     duration: 90 * 60,
                                     points: ["Evergreen street 23",
@@ -31,7 +33,7 @@ struct Home: View {
         ScrollView {
             HStack {
                 Text("Maps")
-                    .font(.title)
+                    .font(.body)
                     .foregroundColor(.primary)
                     .padding(.leading)
                     .padding(.top)
@@ -39,12 +41,15 @@ struct Home: View {
             }
             ForEach(0 ..< projects.count) { index in
                 Button {
-                    
+                    project = projects[index]
                 } label: {
                     Item(project: projects[index])
                         .contentShape(Rectangle())
-                }.padding(.horizontal)
+                }
+                .padding(.horizontal)
             }
+        }.sheet(item: $project) { _ in
+            Project(project: $project)
         }
     }
 }
