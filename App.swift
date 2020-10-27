@@ -1,11 +1,12 @@
 import SwiftUI
 
 @main struct App: SwiftUI.App {
+    @State private var session = Session()
     
     var body: some Scene {
         WindowGroup {
             TabView {
-                Home()
+                Home(session: $session)
                     .tabItem {
                         Image(systemName: "house.fill")
                     }

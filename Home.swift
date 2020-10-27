@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct Home: View {
-    @State private var project: Model?
+    @Binding var session: Session
     
     private let projects = [Model(title: "To the office",
                                     distance: 12.5,
@@ -41,15 +41,15 @@ struct Home: View {
             }
             ForEach(0 ..< projects.count) { index in
                 Button {
-                    project = projects[index]
+                    session.project = projects[index]
                 } label: {
                     Item(project: projects[index])
                         .contentShape(Rectangle())
                 }
                 .padding(.horizontal)
             }
-        }.sheet(item: $project) { _ in
-            Project(project: $project)
+        }.sheet(item: $session.project) { _ in
+            Project(session: $session)
         }
     }
 }

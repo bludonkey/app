@@ -1,43 +1,32 @@
 import SwiftUI
-import MapKit
 
 struct Project: View {
-    @Binding var project: Model?
-    @State private var list = false
-    
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+    @Binding var session: Session
+    @State private var options = false
+    @State private var stops = false
     
     var body: some View {
         ZStack {
-            VStack {
-                Map(coordinateRegion: $region)
-                    .edgesIgnoringSafeArea(.horizontal)
-                if list {
-                    ScrollView {
-                        HStack {
-                            Text("hello world")
-                            Spacer()
-                        }
-                    }.frame(height: 250)
-                }
-            }
+            Map(session: $session)
+                .edgesIgnoringSafeArea(.all)
             VStack {
                 Spacer()
                 HStack {
                     Spacer()
                     Control.Circle(image: "dial.max.fill") {
-                        
+                        options = true
                     }
-                    Control.Circle(state: list ? .selected : .ready, image: "list.bullet") {
-                        withAnimation(.easeInOut(duration: 1)) {
-                            list.toggle()
-                        }
+                    .sheet(isPresented: $options) {
+                        Options(session: $session, visible: $options)
                     }
-                    Control.Circle(image: "location.fill.viewfinder") {
-                        
+                    Control.Circle(image: "list.bullet") {
+                        stops = true
+                    }
+                    .sheet(isPresented: $stops) {
+                        Stops(session: $session, visible: $stops)
                     }
                     Control.Circle(image: "arrow.down") {
-                        project = nil
+                        session.project = nil
                     }
                     Spacer()
                 }
