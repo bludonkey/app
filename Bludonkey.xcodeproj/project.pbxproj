@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1DDA8925484F6F00907869 /* Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DDA8825484F6F00907869 /* Draw.swift */; };
 		CE4001462548376900C7C904 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4001452548376900C7C904 /* Map.swift */; };
 		CE400149254837B000C7C904 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE400148254837B000C7C904 /* Session.swift */; };
 		CE40014D254837D900C7C904 /* Map.Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40014C254837D900C7C904 /* Map.Coordinator.swift */; };
 		CE40015125483B8A00C7C904 /* Stops.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40015025483B8A00C7C904 /* Stops.swift */; };
 		CE40015525483D5200C7C904 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40015425483D5200C7C904 /* Options.swift */; };
+		CE40015825483FAB00C7C904 /* Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40015725483FAB00C7C904 /* Create.swift */; };
+		CE40015C2548471600C7C904 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40015B2548471600C7C904 /* Delegate.swift */; };
 		CE4D516D2545FB3900541255 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D516C2545FB3900541255 /* App.swift */; };
 		CE4D51712545FB3900541255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4D51702545FB3900541255 /* Assets.xcassets */; };
 		CE4D51952546007000541255 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D51942546007000541255 /* Home.swift */; };
@@ -26,11 +29,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE1DDA8825484F6F00907869 /* Draw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draw.swift; sourceTree = "<group>"; };
 		CE4001452548376900C7C904 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		CE400148254837B000C7C904 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		CE40014C254837D900C7C904 /* Map.Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.Coordinator.swift; sourceTree = "<group>"; };
 		CE40015025483B8A00C7C904 /* Stops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stops.swift; sourceTree = "<group>"; };
 		CE40015425483D5200C7C904 /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		CE40015725483FAB00C7C904 /* Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create.swift; sourceTree = "<group>"; };
+		CE40015B2548471600C7C904 /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
 		CE4D51692545FB3900541255 /* Bludonkey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bludonkey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4D516C2545FB3900541255 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		CE4D51702545FB3900541255 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,16 +72,19 @@
 				CEE8ACA625470D54002EA3BE /* Control.Icon.swift */,
 				CEE8ACA825470D54002EA3BE /* Control.State.swift */,
 				CEE8ACA725470D54002EA3BE /* Control.swift */,
+				CE40015725483FAB00C7C904 /* Create.swift */,
+				CE40015B2548471600C7C904 /* Delegate.swift */,
+				CE1DDA8825484F6F00907869 /* Draw.swift */,
 				CE4D5198254600B500541255 /* Home.Item.swift */,
 				CE4D51942546007000541255 /* Home.swift */,
 				CE4D51A1254604D200541255 /* Home.Trail.swift */,
 				CE40014C254837D900C7C904 /* Map.Coordinator.swift */,
 				CE4001452548376900C7C904 /* Map.swift */,
 				CE4D519C254600FF00541255 /* Model.swift */,
+				CE40015425483D5200C7C904 /* Options.swift */,
 				CEE8ACA325470CC0002EA3BE /* Project.swift */,
 				CE400148254837B000C7C904 /* Session.swift */,
 				CE40015025483B8A00C7C904 /* Stops.swift */,
-				CE40015425483D5200C7C904 /* Options.swift */,
 				CE4D51702545FB3900541255 /* Assets.xcassets */,
 				CE4D516A2545FB3900541255 /* Products */,
 			);
@@ -160,14 +169,17 @@
 				CE4D51952546007000541255 /* Home.swift in Sources */,
 				CE40015125483B8A00C7C904 /* Stops.swift in Sources */,
 				CEE8ACAB25470D54002EA3BE /* Control.swift in Sources */,
+				CE1DDA8925484F6F00907869 /* Draw.swift in Sources */,
 				CEE8ACAA25470D54002EA3BE /* Control.Icon.swift in Sources */,
 				CE4D516D2545FB3900541255 /* App.swift in Sources */,
 				CEE8ACAD25470D54002EA3BE /* Control.Circle.swift in Sources */,
 				CE4D5199254600B500541255 /* Home.Item.swift in Sources */,
 				CEE8ACAC25470D54002EA3BE /* Control.State.swift in Sources */,
 				CE4001462548376900C7C904 /* Map.swift in Sources */,
+				CE40015C2548471600C7C904 /* Delegate.swift in Sources */,
 				CE400149254837B000C7C904 /* Session.swift in Sources */,
 				CE4D519D254600FF00541255 /* Model.swift in Sources */,
+				CE40015825483FAB00C7C904 /* Create.swift in Sources */,
 				CE4D51A2254604D200541255 /* Home.Trail.swift in Sources */,
 				CEE8ACA425470CC0002EA3BE /* Project.swift in Sources */,
 				CE40015525483D5200C7C904 /* Options.swift in Sources */,

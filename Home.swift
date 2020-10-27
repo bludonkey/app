@@ -48,7 +48,8 @@ struct Home: View {
                 }
                 .padding(.horizontal)
             }
-        }.sheet(item: $session.project) { _ in
+        }
+        .sheet(item: $session.project) { _ in
             Project(session: $session)
         }
     }
