@@ -4,6 +4,7 @@ struct Draw: View {
     @Binding var session: Session
     @Binding var visible: Bool
     @State private var delete = false
+    @State private var stops = false
     
     var body: some View {
         ZStack {
@@ -22,6 +23,10 @@ struct Draw: View {
                         }, .default(Text("Cancel"))])
                     }
                     Control.Circle(image: "list.bullet") {
+                        stops = true
+                    }
+                    .sheet(isPresented: $stops) {
+                        Stops()
                     }
                     Control.Circle(image: "location.viewfinder") {
                     }
